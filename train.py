@@ -9,8 +9,8 @@ from torch.optim.lr_scheduler import StepLR
 
 
 class Net(nn.Module):
+    """Convolutional neural network with two convolutional layers and two fully connected layers"""
     def __init__(self):
-
 
         super(Net, self).__init__()
         self.conv1 = nn.Conv2d(1,   32, 3, 1)
@@ -37,6 +37,16 @@ class Net(nn.Module):
 
 
 def train(args,    model, device, train_loader, optimizer, epoch):
+    """_summary_
+
+    Args:
+        args (_type_): _description_
+        model (_type_): _description_
+        device (_type_): _description_
+        train_loader (_type_): _description_
+        optimizer (_type_): _description_
+        epoch (_type_): _description_
+    """
     model.train()
     for batch_idx, (data, target) in enumerate(train_loader):
 
@@ -61,6 +71,14 @@ def train(args,    model, device, train_loader, optimizer, epoch):
 
 
 def test(model, device, test_loader, epoch):
+    """_summary_
+
+    Args:
+        model (_type_): _description_
+        device (_type_): _description_
+        test_loader (_type_): _description_
+        epoch (_type_): _description_
+    """
     model.eval()
     test_loss = 0
     correct = 0
@@ -84,6 +102,7 @@ def test(model, device, test_loader, epoch):
 
 
 def main():
+    """Sets up and runs the training and testing of a neural network model on the MNIST dataset."""
     # Training settings
     parser = argparse.ArgumentParser(description="PyTorch MNIST Example")
     parser.add_argument(

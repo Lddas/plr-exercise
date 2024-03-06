@@ -1,0 +1,45 @@
+{
+    "os": "Windows-10-10.0.19045-SP0",
+    "python": "3.11.8",
+    "heartbeatAt": "2024-03-06T14:22:57.248066",
+    "startedAt": "2024-03-06T14:22:52.484865",
+    "docker": null,
+    "cuda": null,
+    "args": [],
+    "state": "running",
+    "program": "c:\\Users\\Admin\\Documents\\ETHZ\\Spring semester 1\\Perception and learning 4 robots\\folder PLR\\plr-exercise\\train.py",
+    "codePathLocal": "train.py",
+    "codePath": "train.py",
+    "git": {
+        "remote": "https://github.com/Lddas/plr-exercise.git",
+        "commit": "c4885ced56925a377306ac9c8b0af7c8f292e7c2"
+    },
+    "email": "leodas@ethz.ch",
+    "root": "C:/Users/Admin/Documents/ETHZ/Spring semester 1/Perception and learning 4 robots/folder PLR/plr-exercise",
+    "host": "DESKTOP-QSBPOJ6",
+    "username": "Admin",
+    "executable": "C:\\Users\\Admin\\Documents\\ETHZ\\Spring semester 1\\Perception and learning 4 robots\\folder PLR\\.plr\\Scripts\\python.exe",
+    "cpu_count": 2,
+    "cpu_count_logical": 4,
+    "cpu_freq": {
+        "current": 2295.0,
+        "min": 0.0,
+        "max": 2295.0
+    },
+    "cpu_freq_per_core": [
+        {
+            "current": 2295.0,
+            "min": 0.0,
+            "max": 2295.0
+        }
+    ],
+    "disk": {
+        "/": {
+            "total": 235.47655868530273,
+            "used": 136.68017578125
+        }
+    },
+    "memory": {
+        "total": 7.877323150634766
+    }
+}

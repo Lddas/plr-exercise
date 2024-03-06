@@ -6,6 +6,7 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.optim.lr_scheduler import StepLR
+import optuna
 
 
 class Net(nn.Module):
@@ -58,7 +59,6 @@ def train(args,    model, device, train_loader, optimizer, epoch):
             )
             if args.dry_run:
                 break
-
 
 def test(model, device, test_loader, epoch):
     model.eval()

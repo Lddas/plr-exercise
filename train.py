@@ -6,7 +6,19 @@ import torch.nn.functional as F
 import torch.optim as optim
 from torchvision import datasets, transforms
 from torch.optim.lr_scheduler import StepLR
+import wandb
+import random
 
+
+run = wandb.init(
+    # Set the project where this run will be logged
+    project="plr-exercise",
+    # Track hyperparameters and run metadata
+    config={
+        "learning_rate": 1.0,
+        "epochs": 2.0,
+    },
+)
 
 class Net(nn.Module):
     def __init__(self):
@@ -81,6 +93,7 @@ def test(model, device, test_loader, epoch):
             test_loss, correct, len(test_loader.dataset), 100.0 * correct / len(test_loader.dataset)
         )
     )
+    wandb.log({"loss": test_loss})
 
 
 def main():
